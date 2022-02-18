@@ -1,4 +1,3 @@
-import 'bulma/css/bulma.min.css';
 import React, { useEffect, useState } from 'react';
 
 function to32bit(val) {
@@ -29,28 +28,30 @@ function App() {
   });
 
   return (
-    <div className="App columns">
-      <div className="column">
-        <div className="is-size-4">
-          64-bit Version
+    <div className="App container is-fluid">
+      <div className="columns">
+        <div className="column">
+          <div className="is-size-4">
+            64-bit Version
+          </div>
+          <div className="is-size-5">
+            { timestamps[0] }
+          </div>
+          <div className="is-size-3 has-text-weight-bold">
+            { dateFormater.format(date64) }
+          </div>
+          
         </div>
-        <div className="is-size-5">
-          { timestamps[0] }
-        </div>
-        <div className="is-size-3">
-          { dateFormater.format(date64) }
-        </div>
-         
-      </div>
-      <div className="column">
-        <div className="is-size-4">
-          32-bit Version
-        </div>
-        <div className="is-size-5">
-          { timestamps[1] }
-        </div>
-        <div className="is-size-3">
-          { dateFormater.format(date32) }
+        <div className="column">
+          <div className="is-size-4">
+            32-bit Version
+          </div>
+          <div className="is-size-5">
+            { timestamps[1] }
+          </div>
+          <div className="is-size-3 has-text-weight-bold">
+            { dateFormater.format(date32) }
+          </div>
         </div>
       </div>
     </div>
